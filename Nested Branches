@@ -1,0 +1,65 @@
+#include <iostream>
+
+using namespace std;
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+   int belanja;
+   int batas_diskon = 1000000;
+   int total_harga;
+
+   cout << "Silahkan masukkan status Anda:" << endl ;
+   cout << "Input 's' (single) atau 'm' (menikah) : " ;
+   string status;
+   cin >> status;
+   cout << "Total belanja Anda : " ;
+   cin >> belanja;
+
+   if (status == "m")
+   {
+     if (belanja >= batas_diskon)
+     {
+       cout << "Diskon 50%" << endl;
+       total_harga = belanja - (belanja * 0.5);
+   }
+   else
+   {
+       cout << "Diskon 25%" << endl;
+       total_harga = belanja - (belanja * 0.25);
+     }
+   }
+   else
+   {
+       if (belanja >= batas_diskon)
+       {
+           cout << "Diskon 25%" << endl;
+           total_harga = belanja - (belanja * 0.25);
+       }
+       else
+       {
+           cout << "Diskon 10%" << endl;
+           total_harga - belanja - (belanja * 0.10);
+       }
+   }
+   cout << "Total harga yang dibayar hanya : "<< total_harga << endl;
+
+   if (status == "m")
+{
+    cout << "Salam untuk keluarga Anda" << endl;
+}
+else
+{
+    cout << "Segeralah menikah !!!" << endl ;
+}
+
+return 0;
+}
+int main()
+{
+    cout << "Hello world!" << endl;
+    return 0;
+}
